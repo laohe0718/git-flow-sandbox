@@ -9,7 +9,6 @@ public class Main {
         System.out.println("5 - 3 = " + calc.subtract(5, 3));
         System.out.println("5 * 3 = " + calc.multiply(5, 3));
 
-        // ⚠️ 这一行会崩溃！用于演示 hotfix 必要性
         try {
             System.out.println("5 / 0 = " + calc.divide(5, 0));
         } catch (Exception e) {
@@ -17,5 +16,6 @@ public class Main {
         }
 
         System.out.println("Max(5, 3) = " + calc.max(5, 3));
+        System.out.println("Average(5, 3) = " + calc.average(5, 3)); // ← 新增
     }
 }
