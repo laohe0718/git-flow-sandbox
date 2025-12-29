@@ -27,9 +27,13 @@ public class Calculator {
      * 除法 —— 【BUG】未处理除零异常！
      */
     public int divide(int a, int b) {
-        // ❌ BUG: 如果 b == 0，会抛出 ArithmeticException，但方法没有声明或处理
-        return a / b; // 这里在 b=0 时崩溃
+        if (b == 0) {
+            System.out.println("除数不能为零");
+            return 0; // v1.0.5 版本修复
+        }
+        return a / b;
     }
+
 
     /**
      * 获取两个数的最大值
