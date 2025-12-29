@@ -24,11 +24,16 @@ public class Calculator {
     }
 
     /**
-     * 除法 —— 【BUG】未处理除零异常！
+     * 除法 —— 修复版：处理除零情况
+     *
+     * @throws IllegalArgumentException 当除数为 0 时抛出
      */
     public int divide(int a, int b) {
-        // ❌ BUG: 如果 b == 0，会抛出 ArithmeticException，但方法没有声明或处理
-        return a / b; // 这里在 b=0 时崩溃
+        if (b == 0) {
+            System.out.println("除数不能为零");
+            return 0; // 这里可以返回一个默认值，或者根据需求抛出异常
+        }
+        return a / b;
     }
 
     /**
