@@ -30,7 +30,8 @@ public class Calculator {
      */
     public int divide(int a, int b) {
         if (b == 0) {
-            throw new IllegalArgumentException("除数不能为零");
+            System.err.println("Error: Division by zero is not allowed.");
+            return 0; // 返回一个默认值
         }
         return a / b;
     }
