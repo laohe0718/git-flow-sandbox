@@ -42,4 +42,15 @@ public class Calculator {
     public int max(int a, int b) {
         return a > b ? a : b;
     }
+
+        /**
+     * 计算两个整数的平均值（向下取整）
+     * 
+     * @param a 第一个整数
+     * @param b 第二个整数
+     * @return (a + b) / 2
+     */
+    public int average(int a, int b) {
+        return add(a, b) / 2; // 复用 add 方法
+    }
 }
